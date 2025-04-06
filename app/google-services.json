@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "732486435640",
+    "project_id": "klassyapp-ae351",
+    "storage_bucket": "klassyapp-ae351.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732486435640:android:6504c395d85ae0b96537cd",
+        "android_client_info": {
+          "package_name": "com.company.klassyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732486435640-kntasvga3ubai8fse3t27nd7mroip9dt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB90_rA1NMr6gkUU2o9JZH4i2hxTF0kWzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732486435640-kntasvga3ubai8fse3t27nd7mroip9dt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
