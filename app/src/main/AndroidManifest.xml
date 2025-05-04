@@ -31,6 +31,9 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.KlassyApp.NoActionBar" />
 
+        <activity android:name=".MakePostActivity" />
+
+
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

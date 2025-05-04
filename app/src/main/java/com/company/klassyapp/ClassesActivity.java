@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class ClassesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private CourseAdapter adapter;
+    private com.company.klassyapp.CourseAdapter adapter;
     private ArrayList<String> courseList = new ArrayList<>();
 
     @Override
@@ -35,7 +35,7 @@ public class ClassesActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.classesRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new CourseAdapter(courseList);
+        adapter = new com.company.klassyapp.CourseAdapter(courseList);
         recyclerView.setAdapter(adapter);
 
         fetchAccessTokenAndCourses();

@@ -1,8 +1,10 @@
 package com.company.klassyapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -13,6 +15,9 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import com.company.klassyapp.ClassesActivity;
+import com.company.klassyapp.MakePostActivity;
+
 
 import com.company.klassyapp.databinding.ActivityMainBinding;
 
@@ -39,6 +44,31 @@ public class MainActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.classes) { // ID for your "Classes" item in the drawer
+                startActivity(new Intent(MainActivity.this, ClassesActivity.class));
+                drawer.closeDrawers(); // Closes drawer after click
+                return true;
+            }
+
+            if (id == R.id.nav_posts) {
+                startActivity(new Intent(MainActivity.this, MakePostActivity.class));
+                drawer.closeDrawers();
+                return true;
+            }
+
+
+            // Handle other items with Navigation Component
+            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+            boolean handled = NavigationUI.onNavDestinationSelected(item, navController);
+            if (handled) {
+                drawer.closeDrawers();
+            }
+            return handled;
+        });
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
