@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Menu;
 
 
+import com.company.klassyapp.ui.PostsFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -54,10 +55,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (id == R.id.nav_posts) {
-                startActivity(new Intent(MainActivity.this, MakePostActivity.class));
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.nav_host_fragment_content_main, new PostsFragment())
+                        .commit();
                 drawer.closeDrawers();
                 return true;
             }
+
 
 
             // Handle other items with Navigation Component

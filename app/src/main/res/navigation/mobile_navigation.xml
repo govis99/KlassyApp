@@ -22,4 +22,11 @@
         android:name="com.company.klassyapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_posts"
+        android:name="com.company.klassyapp.ui.PostsFragment"
+        android:label="Make A Post"
+        tools:layout="@layout/fragment_posts" />
+
 </navigation>
