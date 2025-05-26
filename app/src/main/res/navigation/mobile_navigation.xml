@@ -18,15 +18,23 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.company.klassyapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
         android:id="@+id/nav_posts"
         android:name="com.company.klassyapp.ui.PostsFragment"
         android:label="Make A Post"
         tools:layout="@layout/fragment_posts" />
+
+    <fragment
+        android:id="@+id/nav_signout"
+        android:name="com.company.klassyapp.ui.SignOutFragment"
+        android:label="Sign Out"
+        tools:layout="@layout/fragment_blank" />
+
+    <fragment
+        android:id="@+id/nav_feed"
+        android:name="com.company.klassyapp.ui.FeedFragment"
+        android:label="Feed"
+        tools:layout="@layout/fragment_feed" />
+
+
 
 </navigation>

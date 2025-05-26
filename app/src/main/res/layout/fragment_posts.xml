@@ -22,9 +22,19 @@
         android:layout_height="wrap_content"
         android:inputType="text" />
 
+    <!-- 🔽 Select Due Date Button -->
+    <Button
+        android:id="@+id/selectDueDateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Due Date"
+        android:layout_marginTop="12dp" />
+
+    <!-- 🔽 Submit Button BELOW -->
     <Button
         android:id="@+id/submitAssignmentBtn"
         android:text="Submit Assignment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" />
 </LinearLayout>
