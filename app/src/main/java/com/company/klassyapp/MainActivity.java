@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
 
+
+
+
             if (id == R.id.nav_posts || id == R.id.nav_feed || id == R.id.nav_gallery) {
                 navController.popBackStack(); // prevent stacking
                 navController.navigate(id);

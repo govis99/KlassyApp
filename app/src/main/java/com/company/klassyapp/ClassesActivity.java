@@ -1,7 +1,6 @@
 package com.company.klassyapp;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -9,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.company.klassyapp.ui.CourseAdapter;
 import com.google.android.gms.auth.GoogleAuthUtil;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class ClassesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private com.company.klassyapp.CourseAdapter adapter;
+    private CourseAdapter adapter;
     private ArrayList<String> courseList = new ArrayList<>();
 
     @Override
@@ -35,7 +35,7 @@ public class ClassesActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.classesRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new com.company.klassyapp.CourseAdapter(courseList);
+        adapter = new CourseAdapter(courseList);
         recyclerView.setAdapter(adapter);
 
         fetchAccessTokenAndCourses();
