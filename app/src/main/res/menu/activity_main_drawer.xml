@@ -9,7 +9,9 @@
             android:title="Make A Post" />
         <item
             android:id="@+id/classes"
-            android:title="Classes" />
+            android:title="Classes"
+            android:enabled="false"
+            android:checkable="false" />
         <item
             android:id="@id/nav_gallery"
             android:title="Settings" />

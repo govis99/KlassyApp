@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.classes) {
                 startActivity(new Intent(MainActivity.this, ClassesActivity.class));
                 drawer.closeDrawers();
-                return true;
+                return false;
             }
 
 
